@@ -2,7 +2,7 @@ package com.pluralsight;
 
 public class Room {
     int numberOfBeds;
-    int price;
+    double price;
     boolean isOccupied;
     boolean isDirty;
     boolean isAvailable;
@@ -23,7 +23,7 @@ public class Room {
         return numberOfBeds;
     }
 
-    public int getPrice() {
+    public double getPrice() {
         return price;
     }
 }
