@@ -24,7 +24,12 @@ public class Reservation {
     }
 
     public double getReservationTotal() {
-        return reservationTotal;
+        double totalPrice = price * numberOfNights;
+        if (isWeekend) {
+            totalPrice *= 1.1;
+            // totalPrice = totalPrice + totalPrice * (10/100);
+        }
+        return totalPrice;
     }
 
     public double getPrice() {
@@ -46,4 +51,5 @@ public class Reservation {
     public void setWeekend(boolean weekend) {
         isWeekend = weekend;
     }
+
 }
